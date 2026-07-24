@@ -1,0 +1,1090 @@
+<DOCTYPE html>
+  <html lang="ar" dir="rtl">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>2Morrow - Freelancer Assessment Guide</title>
+      <meta
+        name="description"
+        content="دليل تقييم المستقلين الجدد في 2Morrow: معايير التقييم، ضوابط التسليم، والمهام حسب التخصص."
+      />
+      <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- FontAwesome Icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <!-- Cairo Font -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: {
+                  gold: "#D4AF37",
+                  goldLight: "#F3E5AB",
+                  dark: "#0B0F19",
+                  cardBg: "#131B2E",
+                  cardBorder: "#1F2B48",
+                  accent: "#2563EB",
+                },
+              },
+              fontFamily: {
+                cairo: ["Cairo", "sans-serif"],
+              },
+            },
+          },
+        };
+      </script>
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          font-family: "Cairo", sans-serif;
+          background-color: #0b0f19;
+          color: #f3f4f6;
+        }
+        .gold-gradient-text {
+          background: linear-gradient(
+            135deg,
+            #fff099 0%,
+            #d4af37 50%,
+            #aa7c11 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+          background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+        }
+        .glass-card {
+          background: rgba(19, 27, 46, 0.7);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card:hover {
+          border-color: rgba(212, 175, 55, 0.4);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #1f2b48;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #d4af37;
+        }
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          body {
+            background-color: #fff !important;
+            color: #000 !important;
+          }
+          .glass-card {
+            background: #fff !important;
+            color: #000 !important;
+            border: 1px solid #ccc !important;
+            box-shadow: none !important;
+          }
+          .gold-gradient-text {
+            -webkit-text-fill-color: #000 !important;
+          }
+        }
+      </style>
+    </head>
+    <body
+      class="min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black"
+    >
+      <!-- Header Navigation -->
+      <header
+        class="sticky top-0 z-50 glass-card border-b border-brand-cardBorder px-4 lg:px-8 py-4 no-print"
+      >
+        <div
+          class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4"
+        >
+          <!-- Logo Section -->
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full gold-gradient-bg flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-yellow-500/10"
+            >
+              2M
+            </div>
+            <div>
+              <h1 class="text-xl font-bold tracking-wide gold-gradient-text">
+                2Morrow
+              </h1>
+              <p class="text-xs text-gray-400 font-medium">
+                BUILD TOMORROW TOGETHER
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <div class="flex items-center gap-3">
+            <button
+              onclick="window.print()"
+              class="px-4 py-2 text-xs md:text-sm font-semibold rounded-xl bg-brand-cardBg hover:bg-brand-cardBorder text-gray-200 border border-brand-cardBorder transition flex items-center gap-2"
+            >
+              <i class="fa-solid fa-print text-brand-gold"></i>
+              <span>طباعة / حفظ PDF</span>
+            </button>
+            <a
+              href="#departments"
+              class="px-4 py-2 text-xs md:text-sm font-semibold rounded-xl gold-gradient-bg text-black hover:opacity-90 transition shadow-md flex items-center gap-2"
+            >
+              <i class="fa-solid fa-list-check"></i>
+              <span>عرض المهام</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Container -->
+      <main class="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex-1 space-y-12">
+        <!-- Hero / Banner Section -->
+        <section
+          class="text-center py-10 md:py-16 glass-card rounded-3xl relative overflow-hidden px-6"
+        >
+          <div
+            class="absolute -top-24 -left-24 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
+          ></div>
+
+          <span
+            class="inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-brand-gold/10 text-brand-gold border border-brand-gold/20 mb-4"
+          >
+            FREELANCER ASSESSMENT KIT • VERSION 1.0
+          </span>
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight"
+          >
+            دليل تقييم المستقلين الجدد
+          </h2>
+          <p
+            class="text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
+          >
+            مرحباً بك في رحلة انضمامك لفريق
+            <span class="text-brand-gold font-bold">2Morrow</span>. هذا الدليل
+            المصمم خصيصاً لمساعدتك على فهم نظام التقييم وبدء أولى خطواتك معنا
+            بنجاح.
+          </p>
+        </section>
+
+        <!-- General Info Grid (Welcome & About) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Welcome Card -->
+          <div
+            class="glass-card p-6 md:p-8 rounded-2xl flex flex-col justify-between relative"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg"
+                >
+                  <i class="fa-solid fa-hand-wave"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Welcome To 2Morrow</h3>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                أهلاً بيك في <strong class="text-brand-gold">2Morrow</strong>!
+                إحنا شركة ناشئة بنقدم خدمات متعددة وتطويرية في مجالات كتيير.
+              </p>
+              <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                هدفنا تكوين فريق قوي نقدر نعتمد عليه في المشاريع الحالية
+                والقادمة. علشان كده كل شخص بينضم بيمر بمرحلة تقييم بسيطة وعملية
+                قبل الانضمام للفريق الأساسي.
+              </p>
+            </div>
+            <div class="border-t border-brand-cardBorder pt-4 mt-2">
+              <span class="text-xs text-brand-gold font-semibold"
+                >تخصصاتنا شاملة أكثر من 11 مجال عمل احترافي</span
+              >
+            </div>
+          </div>
+
+          <!-- About Tasks Card -->
+          <div
+            class="glass-card p-6 md:p-8 rounded-2xl flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg"
+                >
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">ليه بنعمل Tasks؟</h3>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                الـ Tasks مش هدفها التعقيد أو إضاعة الوقت، لكن هدفها إننا نتعرف
+                بشكل حقيقي على:
+              </p>
+              <ul
+                class="grid grid-cols-2 gap-2 text-xs text-gray-300 font-medium"
+              >
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i>
+                  مستوى التنفيذ الحقيقي
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i>
+                  طريقة التفكير والتحليل
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i>
+                  الالتزام بالمواعيد
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i> جودة
+                  الشغل النهائية
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i>
+                  استقبال التعديلات
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-brand-gold text-xs"></i>
+                  أسلوب التواصل
+                </li>
+              </ul>
+            </div>
+            <div
+              class="border-t border-brand-cardBorder pt-4 mt-4 bg-brand-gold/5 -mx-6 -mb-6 p-4 rounded-b-2xl"
+            >
+              <p class="text-xs text-center text-gray-300 font-bold">
+                📌 الـ Portfolio مهم جداً.. لكن طريقة تنفيذ الشغل الفعلية هي
+                الأهم!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Evaluation Criteria & Guidelines Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Evaluation Table (1 Col) -->
+          <div class="glass-card p-6 rounded-2xl lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg"
+              >
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">معايير التقييم</h3>
+                <p class="text-xs text-gray-400">طريقة توزيع الـ 100 درجة</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Quality -->
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-gray-200">Quality (الجودة)</span>
+                  <span class="text-brand-gold">40 درجة</span>
+                </div>
+                <div
+                  class="w-full h-2 bg-brand-cardBorder rounded-full overflow-hidden"
+                >
+                  <div class="h-full gold-gradient-bg w-[40%]"></div>
+                </div>
+              </div>
+              <!-- Creativity -->
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-gray-200">Creativity (الابتكار)</span>
+                  <span class="text-brand-gold">20 درجة</span>
+                </div>
+                <div
+                  class="w-full h-2 bg-brand-cardBorder rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-blue-500 w-[20%]"></div>
+                </div>
+              </div>
+              <!-- Communication -->
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-gray-200">Communication (التواصل)</span>
+                  <span class="text-brand-gold">15 درجة</span>
+                </div>
+                <div
+                  class="w-full h-2 bg-brand-cardBorder rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-emerald-500 w-[15%]"></div>
+                </div>
+              </div>
+              <!-- Deadline -->
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-gray-200"
+                    >Deadline (الالتزام بالميعاد)</span
+                  >
+                  <span class="text-brand-gold">15 درجة</span>
+                </div>
+                <div
+                  class="w-full h-2 bg-brand-cardBorder rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-amber-500 w-[15%]"></div>
+                </div>
+              </div>
+              <!-- Organization -->
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-gray-200">Organization (التنظيم)</span>
+                  <span class="text-brand-gold">10 درجات</span>
+                </div>
+                <div
+                  class="w-full h-2 bg-brand-cardBorder rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-pink-500 w-[10%]"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 p-3 rounded-xl bg-brand-cardBorder/50 text-center border border-brand-cardBorder"
+            >
+              <span class="text-xs font-bold text-gray-300"
+                >إجمالي التقييم:
+                <span class="text-brand-gold font-extrabold text-sm"
+                  >100 درجة</span
+                ></span
+              >
+            </div>
+          </div>
+
+          <!-- Guidelines & Delivery Rules (2 Cols) -->
+          <div
+            class="glass-card p-6 md:p-8 rounded-2xl lg:col-span-2 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg"
+                >
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">
+                    تعليمات ضوابط الشغل والتسليم
+                  </h3>
+                  <p class="text-xs text-gray-400">
+                    التزم بالقواعد لضمان قبول التقييم
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <!-- Allowed / Rules -->
+                <div class="space-y-2.5">
+                  <h4
+                    class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2"
+                  >
+                    تعليمات ومسموحات ✅
+                  </h4>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-check text-emerald-400 mt-0.5"
+                    ></i>
+                    <span
+                      >الالتزام التام بالـ Deadline جزء أساسي من التقييم.</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-check text-emerald-400 mt-0.5"
+                    ></i>
+                    <span>ضرورة تسليم الملفات الأصلية (Source Files).</span>
+                  </div>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-check text-emerald-400 mt-0.5"
+                    ></i>
+                    <span>يُسمح باستخدام الـ AI كعنصر مساعد فقط.</span>
+                  </div>
+                </div>
+
+                <!-- Forbidden -->
+                <div class="space-y-2.5">
+                  <h4
+                    class="text-xs font-bold text-rose-400 uppercase tracking-wider mb-2"
+                  >
+                    ممنوعات تسبب الرفض ❌
+                  </h4>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-xmark text-rose-400 mt-0.5"
+                    ></i>
+                    <span>يمنع منعاً باتاً تسليم أعمال منسوخة.</span>
+                  </div>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-xmark text-rose-400 mt-0.5"
+                    ></i>
+                    <span>يمنع إرسال Templates جاهزة بدون تعديل حقيقي.</span>
+                  </div>
+                  <div class="flex items-start gap-2 text-xs text-gray-300">
+                    <i
+                      class="fa-solid fa-circle-xmark text-rose-400 mt-0.5"
+                    ></i>
+                    <span>يمنع إرسال أعمال ليست من تنفيذك الشخصي.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery Method Box -->
+            <div
+              class="bg-brand-cardBorder/60 p-4 rounded-xl border border-brand-cardBorder"
+            >
+              <h4
+                class="text-xs font-bold text-brand-gold mb-2 flex items-center gap-2"
+              >
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>طريقة ومكونات التسليم:</span>
+              </h4>
+              <p class="text-xs text-gray-300 mb-3">
+                يتم التسليم عن طريق رابط مباشر أو
+                <strong class="text-brand-gold">Google Drive</strong>، ويجب أن
+                يحتوي المجلد على:
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-lg bg-black/40 text-xs font-semibold text-gray-200 border border-brand-cardBorder"
+                  >Source Files</span
+                >
+                <span
+                  class="px-3 py-1 rounded-lg bg-black/40 text-xs font-semibold text-gray-200 border border-brand-cardBorder"
+                  >Final Files</span
+                >
+                <span
+                  class="px-3 py-1 rounded-lg bg-black/40 text-xs font-semibold text-gray-200 border border-brand-cardBorder"
+                  >Preview Files</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tasks Filter & Categories Section -->
+        <section id="departments" class="space-y-8 pt-6">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-brand-cardBorder pb-6"
+          >
+            <div>
+              <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                <i class="fa-solid fa-list-check text-brand-gold"></i>
+                <span>المهام والتكليفات حسب التخصص</span>
+              </h2>
+              <p class="text-xs text-gray-400 mt-1">
+                اختر التخصص لاستعراض كافة التكليفات الخاصة به
+              </p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="flex flex-wrap gap-2 no-print" id="filter-buttons">
+              <!-- Dynamic Buttons Generated by JS -->
+            </div>
+          </div>
+
+          <!-- Tasks Container Grid -->
+          <div
+            id="tasks-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Dynamic Task Cards Rendered Here -->
+          </div>
+        </section>
+
+        <!-- Closing Note Section -->
+        <section
+          class="glass-card p-8 rounded-3xl text-center relative overflow-hidden border border-brand-gold/20"
+        >
+          <div class="max-w-2xl mx-auto space-y-4">
+            <div
+              class="w-12 h-12 rounded-2xl gold-gradient-bg text-black flex items-center justify-center text-2xl mx-auto shadow-lg shadow-yellow-500/20"
+            >
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">جاهز تبدأ رحلتك؟</h3>
+            <p class="text-xs md:text-sm text-gray-300 leading-relaxed">
+              ملحوظة مهمة: اجتياز الـ Task لا يعتمد فقط على النتيجة النهائية، بل
+              يعتمد أيضاً على الالتزام، التواصل، سرعة الاستجابة، واستقبال
+              التعديلات بروح إيجابية.
+            </p>
+            <div class="pt-2">
+              <span
+                class="text-sm md:text-base font-extrabold gold-gradient-text tracking-widest block"
+              >
+                BUILDING TOMORROW TOGETHER 🚀
+              </span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="border-t border-brand-cardBorder py-6 text-center text-xs text-gray-500 no-print"
+      >
+        <p>©️ 2026 2Morrow Agency. Confidential - Internal Use Only.</p>
+      </footer>
+
+      <!-- JavaScript Data & Logic -->
+      <script>
+        const tasksData = [
+          // Graphic Design
+          {
+            dept: "Graphic Design",
+            deptAr: "جرافيك ديزاين",
+            icon: "fa-palette",
+            id: "Task 01",
+            title: "Rebranding 2Morrow",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "تطوير اللوجو الحالي لشركة 2Morrow مع الحفاظ على فكرة اللوجو الأساسية.",
+            deliverables: [
+              "Logo Color Version",
+              "Logo Black Version",
+              "Logo White Version",
+              "Mockup",
+            ],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Graphic Design",
+            deptAr: "جرافيك ديزاين",
+            icon: "fa-palette",
+            id: "Task 02",
+            title: "Social Media Design",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "تصميم 3 بوستات احترافية: بوست خدمات، بوست توظيف، وبوست تعريفي بالشركة.",
+            deliverables: ["بوست خدمات", "بوست توظيف", "بوست تعريفي بالشركة"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Graphic Design",
+            deptAr: "جرافيك ديزاين",
+            icon: "fa-palette",
+            id: "Task 03",
+            title: "Brand Guidelines",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "إنشاء Mini Brand Book شامل أسلوب وقواعد العلامة التجارية.",
+            deliverables: [
+              "Colors Palette",
+              "Fonts Hierarchy",
+              "Logo Usage Rules",
+              "Brand Style",
+            ],
+            deadline: "5 أيام",
+          },
+
+          // Branding
+          {
+            dept: "Branding",
+            deptAr: "براندينج",
+            icon: "fa-copyright",
+            id: "Task 01",
+            title: "Brand Identity Proposal",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "اقتراح تطوير كامل لهوية 2Morrow البصرية بشكل عصري ومبتكر.",
+            deliverables: ["Moodboard", "Colors", "Typography", "Visual Style"],
+            deadline: "3 أيام",
+          },
+          {
+            dept: "Branding",
+            deptAr: "براندينج",
+            icon: "fa-copyright",
+            id: "Task 02",
+            title: "Merch Collection",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "تصميم مجموعة منتجات للشركة موحدة باستخدام هوية 2Morrow.",
+            deliverables: ["Notebook", "Mug", "T-Shirt"],
+            deadline: "4 أيام",
+          },
+
+          // Video Editing
+          {
+            dept: "Video Editing",
+            deptAr: "مونتاج فيديو",
+            icon: "fa-film",
+            id: "Task 01",
+            title: "2Morrow Intro Reel",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "إنشاء Reel راسي جذّاب مدته 30 ثانية يعرف بالشركة وخدماتها.",
+            deliverables: ["Reel Video (30s)", "Source Project File"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Video Editing",
+            deptAr: "مونتاج فيديو",
+            icon: "fa-film",
+            id: "Task 02",
+            title: "Personal Brand Reel",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "صناعة وتعديل Reel تعريفي جذاب لمؤسس الشركة.",
+            deliverables: ["Edited Reel", "Subtitles & Graphics"],
+            deadline: "72 ساعة",
+          },
+          {
+            dept: "Video Editing",
+            deptAr: "مونتاج فيديو",
+            icon: "fa-film",
+            id: "Task 03",
+            title: "Company Advertisement",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "مونتاج وإخراج إعلان كامل مدته 60 ثانية يعرض كافة خدمات الشركة.",
+            deliverables: ["Ad Video (60s)", "Sound Effects & Color Grading"],
+            deadline: "5 أيام",
+          },
+
+          // Media Production
+          {
+            dept: "Media Production",
+            deptAr: "إنتاج إعلامي",
+            icon: "fa-video",
+            id: "Task 01",
+            title: "Storyboard Creation",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "إنشاء Storyboard كامل وتفصيلي لفيديو إعلاني عن 2Morrow.",
+            deliverables: [
+              "Storyboard Sketches / Layout",
+              "Scene Descriptions",
+            ],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Media Production",
+            deptAr: "إنتاج إعلامي",
+            icon: "fa-video",
+            id: "Task 02",
+            title: "Production Plan",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "إعداد خطة تصوير وتوجيه كاملة لإعلان الشركة الاحترافي.",
+            deliverables: [
+              "Shooting Schedule",
+              "Equipment List",
+              "Location Breakdown",
+            ],
+            deadline: "3 أيام",
+          },
+
+          // Content Creation
+          {
+            dept: "Content Creation",
+            deptAr: "صناعة محتوى",
+            icon: "fa-pen-nib",
+            id: "Task 01",
+            title: "15 Hooks",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "كتابة 15 خطاف (Hook) قاطعة وجذابة للفيديوهات القصيرة الخاصة بالشركة.",
+            deliverables: ["Document containing 15 Video Hooks"],
+            deadline: "24 ساعة",
+          },
+          {
+            dept: "Content Creation",
+            deptAr: "صناعة محتوى",
+            icon: "fa-pen-nib",
+            id: "Task 02",
+            title: "30 Content Ideas",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "إنشاء قائمة بـ 30 فكرة محتوى متنوعة ومناسبة لمنصات التواصل الاجتماعي.",
+            deliverables: ["Content Calendar / Idea Sheet"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Content Creation",
+            deptAr: "صناعة محتوى",
+            icon: "fa-pen-nib",
+            id: "Task 03",
+            title: "Video Script",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "كتابة سيناريو وسكربت كامل (Script) لفيديو تعريفي بالشركة مدته 60 ثانية.",
+            deliverables: ["Full Video Script (Voiceover + Visual Actions)"],
+            deadline: "72 ساعة",
+          },
+
+          // Marketing
+          {
+            dept: "Marketing",
+            deptAr: "تسويق",
+            icon: "fa-chart-line",
+            id: "Task 01",
+            title: "Marketing Plan",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "إعداد خطة تسويقية أولية وشاملة لمدة شهر لشركة 2Morrow.",
+            deliverables: ["Monthly Marketing Strategy Document"],
+            deadline: "3 أيام",
+          },
+          {
+            dept: "Marketing",
+            deptAr: "تسويق",
+            icon: "fa-chart-line",
+            id: "Task 02",
+            title: "Competitor Analysis",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "تحليل نقاط القوة والضعف لـ 5 شركات منافسة في نفس المجال.",
+            deliverables: ["Competitor Analysis Matrix / Report"],
+            deadline: "3 أيام",
+          },
+          {
+            dept: "Marketing",
+            deptAr: "تسويق",
+            icon: "fa-chart-line",
+            id: "Task 03",
+            title: "Lead Generation Plan",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "وضع استراتيجية عملية لجذب واكتساب أول 100 عميل محتمل للشركة.",
+            deliverables: ["Lead Gen Funnel & Acquisition Strategy"],
+            deadline: "5 أيام",
+          },
+
+          // Media Buying
+          {
+            dept: "Media Buying",
+            deptAr: "إعلانات ممولة",
+            icon: "fa-rectangle-ad",
+            id: "Task 01",
+            title: "Case Study Solution",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "دراسة حالة: عميل يستهدف زيادة المبيعات بشكل سريع، توضيح طريقة التعامل والتحليل.",
+            deliverables: ["Action Plan Proposal"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Media Buying",
+            deptAr: "إعلانات ممولة",
+            icon: "fa-rectangle-ad",
+            id: "Task 02",
+            title: "Campaign Structure",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "إنشاء هيكل حملة إعلانية ممولة كاملة (Targeting, Budgets, Creatives Setup).",
+            deliverables: ["Campaign Hierarchy & Audience Setup Document"],
+            deadline: "72 ساعة",
+          },
+          {
+            dept: "Media Buying",
+            deptAr: "إعلانات ممولة",
+            icon: "fa-rectangle-ad",
+            id: "Task 03",
+            title: "Optimization Strategy",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "تحليل نتائج حملة إعلانية سابقة واقتراح خطة تحسين النتائج وتقليل التكلفة.",
+            deliverables: ["Performance Audit & Optimization Report"],
+            deadline: "4 أيام",
+          },
+
+          // Web Development
+          {
+            dept: "Web Development",
+            deptAr: "تطوير ويب",
+            icon: "fa-code",
+            id: "Task 01",
+            title: "Landing Page",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "تصميم وتطوير صفحة هبوط (Landing Page) متجوبة وجذابة لـ 2Morrow.",
+            deliverables: ["Responsive Landing Page Code / Live Preview"],
+            deadline: "4 أيام",
+          },
+          {
+            dept: "Web Development",
+            deptAr: "تطوير ويب",
+            icon: "fa-code",
+            id: "Task 02",
+            title: "Freelancer Application Form",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "إنشاء صفحة تقديم واستمارة تفاعلية احترافية للمستقلين للتقديم في الشركة.",
+            deliverables: ["Interactive Form with Validation"],
+            deadline: "3 أيام",
+          },
+          {
+            dept: "Web Development",
+            deptAr: "تطوير ويب",
+            icon: "fa-code",
+            id: "Task 03",
+            title: "Agency Dashboard",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "بناء لوحة تحكم (Dashboard) كاملة لإدارة العملاء والمشاريع.",
+            deliverables: ["Admin Dashboard UI & Logic"],
+            deadline: "7 أيام",
+          },
+
+          // Mobile App Development
+          {
+            dept: "Mobile App Development",
+            deptAr: "تطوير تطبيقات",
+            icon: "fa-mobile-screen-button",
+            id: "Task 01",
+            title: "Mobile App Prototype",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "تصميم نمط أولي (Prototype) لتطبيق الهاتف الخاص بشركة 2Morrow.",
+            deliverables: ["Interactive Prototype Screens"],
+            deadline: "4 أيام",
+          },
+          {
+            dept: "Mobile App Development",
+            deptAr: "تطوير تطبيقات",
+            icon: "fa-mobile-screen-button",
+            id: "Task 02",
+            title: "App User Flow",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "تصميم وتوثيق الـ User Flow الكامل للتطبيق من التسجيل وحتى طلب الخدمة.",
+            deliverables: ["Full User Flow Diagram & Screens"],
+            deadline: "3 أيام",
+          },
+
+          // Technical Solutions
+          {
+            dept: "Technical Solutions",
+            deptAr: "حلول تقنية",
+            icon: "fa-gears",
+            id: "Task 01",
+            title: "Automation Proposal",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "اقتراح وتصميم حلول أتمتة (Automation) لسير العمل داخل الشركة لتوفير الوقت.",
+            deliverables: ["Automation Workflow Proposal Document"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Technical Solutions",
+            deptAr: "حلول تقنية",
+            icon: "fa-gears",
+            id: "Task 02",
+            title: "CRM System Design",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "تصميم ونمذجة نظام متكامل لمتابعة وتدفق إدارة العملاء (CRM System).",
+            deliverables: ["System Architecture & CRM Functional Setup"],
+            deadline: "5 أيام",
+          },
+
+          // Data & Excel
+          {
+            dept: "Data & Excel",
+            deptAr: "بيانات وإكسيل",
+            icon: "fa-file-excel",
+            id: "Task 01",
+            title: "Client Dashboard",
+            level: "Easy",
+            levelAr: "سهل",
+            levelColor: "emerald",
+            desc: "إنشاء لوحة بيانات (Excel Dashboard) تفاعلية لمتابعة بيانات وتحليلات العملاء.",
+            deliverables: ["Interactive Excel File with Charts"],
+            deadline: "48 ساعة",
+          },
+          {
+            dept: "Data & Excel",
+            deptAr: "بيانات وإكسيل",
+            icon: "fa-file-excel",
+            id: "Task 02",
+            title: "Sales Report",
+            level: "Medium",
+            levelAr: "متوسط",
+            levelColor: "amber",
+            desc: "إعداد تقرير مبيعات وافي ومصمم بشكل احترافي يعكس الأرقام والمؤشرات.",
+            deliverables: ["Formatted Sales Sheet & Summary"],
+            deadline: "72 ساعة",
+          },
+          {
+            dept: "Data & Excel",
+            deptAr: "بيانات وإكسيل",
+            icon: "fa-file-excel",
+            id: "Task 03",
+            title: "Excel Automation",
+            level: "Hard",
+            levelAr: "صعب",
+            levelColor: "rose",
+            desc: "استخدام Functions متقدمة و Pivot Tables لبناء نظام متابعة متكامل ومؤتمت.",
+            deliverables: ["Automated Excel Workbook / Tracker"],
+            deadline: "5 أيام",
+          },
+        ];
+
+        let selectedDept = "All";
+
+        // Render Filter Buttons
+        function renderFilters() {
+          const filterContainer = document.getElementById("filter-buttons");
+          const departments = ["All", ...new Set(tasksData.map((t) => t.dept))];
+
+          filterContainer.innerHTML = departments
+            .map((dept) => {
+              const isActive = selectedDept === dept;
+              const activeClass = isActive
+                ? "gold-gradient-bg text-black font-bold shadow-md"
+                : "bg-brand-cardBg text-gray-300 hover:bg-brand-cardBorder border border-brand-cardBorder";
+
+              const label = dept === "All" ? "الكل" : dept;
+              const count =
+                dept === "All"
+                  ? tasksData.length
+                  : tasksData.filter((t) => t.dept === dept).length;
+              return `
+                    <button onclick="filterTasks('${dept}')" aria-current="${isActive}" class="px-3 py-1.5 rounded-xl text-xs transition duration-200 ${activeClass}">
+                        ${label} <span class="opacity-70">(${count})</span>
+                    </button>
+                `;
+            })
+            .join("");
+        }
+
+        // Filter Logic
+        function filterTasks(dept) {
+          selectedDept = dept;
+          renderFilters();
+          renderTasks();
+        }
+
+        // Render Task Cards
+        function renderTasks() {
+          const container = document.getElementById("tasks-container");
+          const filteredTasks =
+            selectedDept === "All"
+              ? tasksData
+              : tasksData.filter((t) => t.dept === selectedDept);
+
+          if (filteredTasks.length === 0) {
+            container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-400 text-sm">لا توجد مهام متاحة لهذا القسم.</div>`;
+            return;
+          }
+
+          container.innerHTML = filteredTasks
+            .map((task) => {
+              // Color badges
+              let badgeStyle =
+                "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+              if (task.level === "Medium")
+                badgeStyle =
+                  "bg-amber-500/10 text-amber-400 border-amber-500/20";
+              if (task.level === "Hard")
+                badgeStyle = "bg-rose-500/10 text-rose-400 border-rose-500/20";
+
+              return `
+                    <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:translate-y-[-2px] transition duration-300">
+                        <div>
+                            <!-- Header Info -->
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <span class="text-[10px] font-bold px-2.5 py-1 rounded-md border ${badgeStyle} flex items-center gap-1">
+                                    <i class="fa-solid fa-signal text-[8px]"></i> ${task.levelAr} (${task.level})
+                                </span>
+                                <span class="text-xs font-bold text-gray-400 bg-black/40 px-2.5 py-1 rounded-md border border-brand-cardBorder">
+                                    ${task.id}
+                                </span>
+                            </div>
+
+                            <!-- Title & Department -->
+                            <div class="mb-3">
+                                <span class="text-[11px] font-semibold text-brand-gold flex items-center gap-1 mb-1">
+                                    <i class="fa-solid ${task.icon}"></i> ${task.deptAr}
+                                </span>
+                                <h3 class="text-lg font-bold text-white leading-snug">${task.title}</h3>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-xs text-gray-300 mb-4 leading-relaxed">${task.desc}</p>
+
+                            <!-- Deliverables List -->
+                            <div class="space-y-1.5 mb-4 bg-black/20 p-3 rounded-xl border border-brand-cardBorder/50">
+                                <span class="text-[10px] font-bold text-gray-400 block mb-1">المطلوب تسليمه:</span>
+                                ${task.deliverables
+                                  .map(
+                                    (item) => `
+                                    <div class="flex items-center gap-2 text-xs text-gray-300">
+                                        <i class="fa-solid fa-angle-left text-brand-gold text-[10px]"></i>
+                                        <span>${item}</span>
+                                    </div>
+                                `,
+                                  )
+                                  .join("")}
+                            </div>
+                        </div>
+
+                        <!-- Card Footer -->
+                        <div class="border-t border-brand-cardBorder/60 pt-3 flex justify-between items-center text-xs text-gray-400">
+                            <span class="flex items-center gap-1.5 font-medium">
+                                <i class="fa-regular fa-clock text-brand-gold"></i> المهلة:
+                            </span>
+                            <span class="font-bold text-white bg-brand-cardBorder px-2.5 py-1 rounded-lg">
+                                ${task.deadline}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            })
+            .join("");
+        }
+
+        // Initialize App
+        window.onload = function () {
+          renderFilters();
+          renderTasks();
+        };
+      </script>
+    </body>
+  </html>
+</DOCTYPE>
